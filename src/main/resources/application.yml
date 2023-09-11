@@ -12,3 +12,15 @@ spring:
           uri: 'http://localhost:8081'
           predicates:
             - Path=/urgency/**
+        - id: security_service
+          uri: 'http://localhost:8084'
+          predicates:
+            - Path=/auth/**
+        - id: hospital_management_service
+          uri: 'http://localhost:8085'
+          predicates:
+            - Path=/hospital/**
+        - id: distance_calculation_service
+          uri: 'http://localhost:8990'
+          predicates:
+            - Path=/route/**
